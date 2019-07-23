@@ -82,7 +82,7 @@ Let them print
 */
 
 $(document).ready(function() {
-    $('#print').click(function(){
+    $('.printPage').click(function(){
         window.print();
    });
 });
@@ -95,6 +95,19 @@ Q7:
 Can username be too long? Yest it can - lets limit that
 */
 
+$(document).ready(function() {
+    var textLength;
+    $('#rchars').text(20);
+
+    $('#textarea').on('keyup', function(){
+        $('#textarea').attr('maxLength', 20);
+
+        textLength =  $('#textarea').attr('maxLength') - $('#textarea').val().length;
+        $('#rchars').text(textLength);
+   });
+});
+
+
 
 /*
 Q8:
@@ -102,10 +115,21 @@ Wanna make some words bolder, do it with jQuery
 */
 
 
+$(document).ready(function() {
+    $('.bolder').css('font-weight', 'bold');
+});
+
 /*
 Q9:
 Add new div to your website
 */
+
+
+var btn = $('input[value="Click to add new div"]');
+
+function new_div() {    
+    btn.after('<div style="margin-top:30px; height:200px; width:200px; background-color: red"></div>');
+}
 
 
 /*
@@ -114,10 +138,27 @@ Select values from a JSON object using jQuery
 */
 
 
+
+
+
+
+
 /*
 Q11:
 Add element within ul list
 */
+
+$(document).ready(function() {
+    var btn = $('#btnclick');
+    var ul = $('#header ul');
+
+    console.log(btn);
+    console.log(ul);
+
+    btn.on('click', function() {
+        ul.append('<li><a href="#">New Element</a></li>');
+    });
+});
 
 
 /*
