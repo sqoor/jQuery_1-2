@@ -104,9 +104,11 @@ $(document).ready(function() {
 // EXERCISE 10: Empty Elements
 // Remove all children and text of "#target"
 
+/*
 $(document).ready(function () {
     $('#target').contents().remove();
 });
+*/
 
 // Advanced part
 // EXERCISE 11: Delay
@@ -136,6 +138,7 @@ $(document).ready(function() {
 // EXERCISE 13: Animate
 // Make "#target" double size with animation
 
+/*
 $(document).ready(function() {
     var target = $("#target");
     var dimentions = {
@@ -145,7 +148,7 @@ $(document).ready(function() {
 
     target.animate(dimentions, 4000);
 });
-
+*/
 
 
 
@@ -153,6 +156,10 @@ $(document).ready(function() {
 // EXERCISE 14: Alternate Color
 // Make the list-box alternating. (Make odd options a different color)
 
+$(document).ready(function() {
+    var target = $("#target select option:odd");
+    target.css('background-color', 'orange');
+});
 
 
 // EXERCISE 15: All But One
