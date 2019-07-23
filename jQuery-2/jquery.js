@@ -85,9 +85,13 @@ $(document).ready(function() {
 // EXERCISE 8: Select An Option in A Select Box
 // Select the second option in the selectbox by script
 
-/* $(document).ready(function() {
+/* 
+
+$(document).ready(function() {
     $('option:eq(1)').attr('selected', true)
-}); */
+}); 
+
+*/
 
 
 // EXERCISE 9: Change Size
@@ -173,9 +177,19 @@ $(document).ready(function() {
 
 
 // EXERCISE 16: Without Children
-// Remove all 'div' whitch has no child elements.
+// Remove all 'div' which has no child elements.
 
+$(document).ready(function() {
+    var target = $(".target");
+    console.log(target.length)
 
+    for(var i = 0; i < target.length; i++) {
+        if(target[i].children.length === 0) {
+            console.log(target[i]);
+            target[i].remove();
+        }
+    }
+});
 
 
 
