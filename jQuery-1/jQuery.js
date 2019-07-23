@@ -166,11 +166,23 @@ Q12:
 Know what user puts into textbox
 */
 
+$(document).ready(function() {
+   $('#usertext').on('keyup', function() {
+       console.log($('usertext').val());
+   })
+});
+
 
 /*
 Q13:
 Change input value
 */
+
+
+$(document).ready(function() {
+    $('#button').val('Sqoor & Obidat');
+ });
+
 
 
 
