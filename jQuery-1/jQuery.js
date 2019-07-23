@@ -45,17 +45,49 @@ Q4:
 Learn how to fadein your boxes
 */
 
+$(document).ready(function() {
+    var div1 = $('#div1');
+    var div2 = $('#div2');
+    var div3 = $('#div3');
+    var btn = $('#btnQ4');
+
+    btn.on('click', function() {
+        div1.fadeIn(3000);
+        div2.fadeIn(3000);
+        div3.fadeIn(3000);
+    });
+});
+
+
 
 /*
 Q5:
 User must first accept then he or she can signup
 */
 
+$(document).ready(function() {
+    var acceptBtn = $('#accept');
+    var submitBtn = $('#submitbtn');
+   
+    acceptBtn.on('click', function() {
+        submitBtn.attr('disabled', !this.checked);
+    });
+});
+
+
 
 /*
 Q6:
 Let them print
 */
+
+$(document).ready(function() {
+    $('#print').click(function(){
+        window.print();
+   });
+});
+
+
 
 
 /*
