@@ -93,12 +93,13 @@ $(document).ready(function() {
 // EXERCISE 9: Change Size
 // Make "#target" double size
 
-/* $(document).ready(function() {
+/*
+ $(document).ready(function() {
      var ourDiv = $('#target');
-     ourDiv.height(ourDiv.height() *2)
-     ourDiv.width(ourDiv.width() *2)
-}); */
-
+     ourDiv.height(ourDiv.height() * 2)
+     ourDiv.width(ourDiv.width() * 2)
+}); 
+*/
 
 // EXERCISE 10: Empty Elements
 // Remove all children and text of "#target"
@@ -120,6 +121,14 @@ $(document).ready(function () {
 
 // EXERCISE 12: Count
 // Show the number of children in an alert
+
+$(document).ready(function() {
+    var count = $("#target1").children().length;
+    console.log('count', count);
+});
+
+
+
 
 
 
