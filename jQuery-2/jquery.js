@@ -122,11 +122,12 @@ $(document).ready(function () {
 // EXERCISE 12: Count
 // Show the number of children in an alert
 
+/*
 $(document).ready(function() {
     var count = $("#target1").children().length;
     console.log('count', count);
 });
-
+*/
 
 
 
@@ -134,6 +135,19 @@ $(document).ready(function() {
 
 // EXERCISE 13: Animate
 // Make "#target" double size with animation
+
+$(document).ready(function() {
+    var target = $("#target");
+    var dimentions = {
+        height: target.height() * 2,
+        width: target.width() * 2
+    };
+
+    target.animate(dimentions, 4000);
+});
+
+
+
 
 
 // EXERCISE 14: Alternate Color
