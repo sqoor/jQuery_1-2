@@ -1,10 +1,22 @@
 // EXERCISE 1: Change Background
-// Change the background color of '#target' by script. 
+// Change the background color of '#target' by script.
+
+/*
+$(document).ready(function() {
+    $('#target').css('background-color', 'lightblue');
+});
+*/
+
 
 
 // EXERCISE 2: Change Parent
 // Change the text in the span, a child of "#target"
 
+/*   
+$(document).ready(function() {
+    $('#target span').text('text changed');
+})
+*/
 
 
 
@@ -12,38 +24,88 @@
 // Create a clone of the span in "#target" and position it under the origin.
 
 
+
+/* $(document).ready(function() {
+    var origialSpan = $('#target span');
+    var newSpan = $('#target span').clone();
+    origialSpan.after(newSpan);
+    $('#target').css('width', '300px');
+});
+ */
+
+
 // EXERCISE 4: Use Filter
 // Change background color of the second ".target"
+
+
+/*  
+$(document).ready(function() {
+    $('.target:eq(1)').css('background-color', 'red')
+});
+ */
+
+
 
 
 
 // EXERCISE 5: Disable Buttons
 // Disable the button
+/* 
+$(document).ready(function() {
+    $('.target button').attr('disabled', true);
+});
+ */
+
+
+
 
 // EXERCISE 6: Uncheck CheckBoxes
 // Uncheck all checkboxes using jQuery
+
+/* 
+$(document).ready(function() {
+    $('.target input[type="checkbox"]').attr('checked', false);
+});
+ */
 
 
 
 // EXERCISE 7: Change Parent
 // Move "#child" from "#parent1" to "#parent2"
 
+/* $(document).ready(function() {
+    var child = $('#child');
+    var cloneChild = child.clone();
+    child.remove();
+    $('#parent2').append(cloneChild);
+});
+ */
 
 
-// EXERCISE 8: Select A Option in A Select Box
+// EXERCISE 8: Select An Option in A Select Box
 // Select the second option in the selectbox by script
 
+/* $(document).ready(function() {
+    $('option:eq(1)').attr('selected', true)
+}); */
 
 
 // EXERCISE 9: Change Size
 // Make "#target" double size
 
-
+/* $(document).ready(function() {
+     var ourDiv = $('#target');
+     ourDiv.height(ourDiv.height() *2)
+     ourDiv.width(ourDiv.width() *2)
+}); */
 
 
 // EXERCISE 10: Empty Elements
 // Remove all children and text of "#target"
 
+$(document).ready(function () {
+    $('#target').contents().remove();
+});
 
 // Advanced part
 // EXERCISE 11: Delay
